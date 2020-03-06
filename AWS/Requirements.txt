@@ -1,0 +1,17 @@
+cython
+appdirs
+click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+numpy
+packaging
+pandas
+pyparsing
+python-dateutil
+pytz
+scikit-learn
+scipy
+six
+Werkzeug
