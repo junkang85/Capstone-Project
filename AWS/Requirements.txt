@@ -5,6 +5,7 @@ Flask
 itsdangerous
 Jinja2
 MarkupSafe
+librosa
 numpy
 packaging
 pandas
@@ -13,5 +14,6 @@ python-dateutil
 pytz
 scikit-learn
 scipy
+sklearn.externals
 six
 Werkzeug
