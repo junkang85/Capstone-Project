@@ -2,7 +2,7 @@ import librosa
 import numpy as np
 import pandas as pd
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from sklearn.externals import joblib
 
 app = Flask(__name__)
@@ -32,7 +32,7 @@ def CNN_Single(x):
 
 @app.route('/')
 def hello_world():
-    return 'Welcome to JK Digit Translator App'
+    return 'Welcome to JK Digit Translator App!'
 
 @app.route('/predict-digits-interface', methods = ["POST"])
 def predict_digits_interface():
