@@ -7,6 +7,14 @@ from sklearn.externals import joblib
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return jsonify('Welcome to JK Digit Translator App!')
+
+@app.rout('/json-test')
+def json_test()
+    return jsonify('Json Test')
+
 cnn = joblib.load('cnn.pkl')
 
 def Resample_1kHz(x):
@@ -30,11 +38,7 @@ def CNN_Single(x):
     X = np.array(X).reshape(-1,1000,1)
     return cnn.predict_classes(X)[0]
 
-@app.route('/')
-def hello_world():
-    return 'Welcome to JK Digit Translator App!'
-
-@app.route('/predict-digits-interface', methods = ["POST"])
+@app.route('/predict-digits-interface', methods = "POST")
 def predict_digits_interface():
     output = None
     if request.method == "POST":
