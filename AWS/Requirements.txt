@@ -4,6 +4,7 @@ click
 Flask
 itsdangerous
 Jinja2
+joblib
 MarkupSafe
 librosa
 numpy
@@ -14,6 +15,5 @@ python-dateutil
 pytz
 scikit-learn
 scipy
-sklearn.externals
 six
 Werkzeug
