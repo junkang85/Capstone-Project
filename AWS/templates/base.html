@@ -1,20 +1,33 @@
 <html>
 <head>
-  <title>JK Digit Translator App</title>
+  <title>JK Digits Translator App</title>
 </head>
 
 <body>
 
-  <h1>Say and record a digit, upload the wav file to make a translation!</h1>
-  <form action="/predict-digits-interface" method="POST">
-  Select Wave File to Upload:
-  <input type="file" name="audioFile" id="audioFile">
+  <h1>Translate digits in speech to text!</h1>
+  <form action="/digits" method="POST" enctype="multipart/form-data">
+  Upload Audio File:
+  <input type="file" name="audioFile" >
   <button type="submit">Submit</button>
   </form>
-
-{% if output %}
-<b>Translated Digit:</b> {{ output }}
-{% endif %}
-
+<p>
+<br />
+{% if Audio_Filename %}
+<b>Uploaded Audio Filename:</b> {{ Audio_Filename }}
+{% endif %} <br />
+<br />
+{% if Google_Digits %}
+<b>Google's Speech Recognition App thinks you said:</b> {{ Google_Digits }}
+{% endif %} <br />
+<br />
+{% if RFC_Digits %}
+<b>JK App's Machine Learning Model thinks you said:</b> {{ RFC_Digits }}
+{% endif %} <br />
+<br />
+{% if CNN_Digits %}
+<b>JK App's Deep Learning Model thinks you said:</b> {{ CNN_Digits }}
+{% endif %} <br />
+</p>
 </body>
 </html>
