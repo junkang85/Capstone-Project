@@ -2,8 +2,12 @@
 
 Content
 1. Problem Statement
-2. Development and Production Models
-3. AWS Deployment
+2. Data Collection
+3. Development Models
+4. Production Models
+5. Flask Local Virtual Environment Deployment Configuration
+6. AWS Deployment Configuration
+7. Current Limitations
 
 Problem Statement
 1. To build an App for waypoint translation (digit 0 to 9) from speech to text. Envisaged to enhance the App for waypoint translation in the future
@@ -19,7 +23,7 @@ Development Models
 2. Random Forest Classifier
 3. Convolutional Neural Network
 
-Production Machine and Deep Learning Models
+Production Models
 1. Random Forest Classifier
 2. Convolutional Neural Network
 
